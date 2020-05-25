@@ -1,5 +1,5 @@
 {% set name = "custom-inherit" %}
-{% set version = "2.2.2" %}
+{% set version = "2.3.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/c/{{ name }}/custom_inherit-{{ version }}.tar.gz"
-  sha256: 83c048bc3415a9e38e44e78dbe231f837aa3d4fd91b4e71443b6f6e38034f583
+  sha256: 1609d283c2cffce3a58baf7c0c22b655c55f85e1ec39c4717a4423d34610723a
 
 build:
   number: 0
