@@ -5,11 +5,11 @@ Home: https://github.com/rsokl/custom_inherit
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/custom-inherit-feedstock/blob/master/LICENSE.txt)
 
 Summary: A Python package that provides customized docstring inheritance schemes between derived classes and their parents.
 
-
+Documentation: https://github.com/rsokl/custom_inherit/blob/master/README.md
 
 Current build status
 ====================
