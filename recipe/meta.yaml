@@ -1,38 +1,38 @@
 {% set name = "custom-inherit" %}
-{% set version = "2.3.1" %}
+{% set version = "2.3.2" %}
 
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/c/{{ name }}/custom_inherit-{{ version }}.tar.gz"
-  sha256: a0d104847b4cc1ae24e00061fc2e11da8766b019bf4c8c753822347366c8c49f
+  url: https://pypi.io/packages/source/c/{{ name }}/custom_inherit-{{ version }}.tar.gz
+  sha256: 37f9c5a403e48b6d4ef4b9a6098e549fd1c5e67fe11165af347fa0e0c3802358
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
-    - python
+    - python >=3.6 
 
 test:
   imports:
     - custom_inherit
 
 about:
-  home: "https://github.com/rsokl/custom_inherit"
-  license: "MIT"
-  license_family: "MIT"
-  license_file: "LICENSE.md"
-  summary: "A Python package that provides customized docstring inheritance schemes between derived classes and their parents."
-  doc_url: "https://github.com/rsokl/custom_inherit/blob/master/README.md"
+  home: https://github.com/rsokl/custom_inherit
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE.md
+  summary: A Python package that provides customized docstring inheritance schemes between derived classes and their parents.
+  doc_url: https://github.com/rsokl/custom_inherit/blob/master/README.md
 
 extra:
   recipe-maintainers:
