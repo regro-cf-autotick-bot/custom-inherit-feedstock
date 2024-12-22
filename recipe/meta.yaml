@@ -7,22 +7,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/c/{{ name }}/custom_inherit-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/c/{{ name }}/custom_inherit-{{ version }}.tar.gz
   sha256: 7052eb337bcce83551815264391cc4efc2bf70b295a3c52aba64f1ab57c3a8a2
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - custom_inherit
 
